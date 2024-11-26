@@ -43,6 +43,18 @@ section {
   border: 1px solid #e8efe9;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+figure  {
+  text-align: center;
+  margin: 20px;
+}
 /* Links */
 a {
   color: #698b69;
