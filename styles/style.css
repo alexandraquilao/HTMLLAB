@@ -55,6 +55,17 @@ figure  {
   text-align: center;
   margin: 20px;
 }
+
+ul, ol {
+  padding-left: 20px;
+  margin: 15px 0;
+  color: #4a4a4a;
+}
+
+li{
+  margin-bottom: 10px;
+}
+
 /* Links */
 a {
   color: #698b69;
