@@ -138,19 +138,19 @@ footer {
   }
 }
 .morning {
-  background-color: #ffeb3b;
+  background-color: #adcc81;
   color: #333;
   padding: 10px;
 }
 
 .afternoon {
-  background-color: #ff9800;
+  background-color: #866c45;
   color: white;
   padding: 10px;
 }
 
 .evening {
-  background-color: #3f51b5;
+  background-color: #44736a;
   color: white;
   padding: 10px;
 }
