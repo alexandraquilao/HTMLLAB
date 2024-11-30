@@ -1,3 +1,14 @@
+// Add this at the top of your script.js
+console.log("JavaScript file loaded!");
+
+// Test if button exists
+const button = document.getElementById("btn-alert");
+if (button) {
+    console.log("Button found!");
+} else {
+    console.log("Button not found - check your HTML ID");
+}
+
 // footer with current year
 const footerElement = document.getElementById("footer");
 const currentYear = new Date().getFullYear();
