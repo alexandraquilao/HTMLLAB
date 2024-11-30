@@ -24,3 +24,19 @@ function setGreeting() {
         Greeting.className = "evening";
     }
 }
+setGreeting();
+
+//Alert Button
+const AlertButton = document.getElementById("btn-alert");
+AlertButton.addEventListener("click"), function() {
+    this.innerText = "Hover activated!";
+
+}
+
+//Hover button Functionality
+AlertButton.addEventListener("mouseover"), function() {
+    this.innerText = "Hover activated!"
+};
+AlertButton.addEventListener("mouseout"), function() {
+    this.innerText = "Click Me!";
+}; 
