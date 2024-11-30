@@ -19,16 +19,14 @@ console.log(new Date().toLocaleDateString());
 //Greeting based on time of day
 function setGreeting() {
     const Greeting = document.getElementById("greeting");
-    const hour = new date().gethours();
-
-    if (hour<12) {
+    const hour = new Date().getHours();  // Fixed Date and getHours
+    if (hour < 12) {
         Greeting.innerHTML = "Good Morning!";
         Greeting.className = "morning";
-    } 
-    else if (hour<17) {
+    }
+    else if (hour < 17) {
         Greeting.innerHTML = "Good Afternoon!";
         Greeting.className = "afternoon";
-
     }
     else {
         Greeting.innerHTML = "Good Evening!";
@@ -39,18 +37,17 @@ setGreeting();
 
 //Alert Button
 const AlertButton = document.getElementById("btn-alert");
-AlertButton.addEventListener("click"), function() {
+AlertButton.addEventListener("click", function() {  // remove extra parenthesis
+    this.innerText = "Clicked!";  // changed message to be different from hover
+});
+
+AlertButton.addEventListener("mouseover", function() {  // remove extra parenthesis
     this.innerText = "Hover activated!";
+});
 
-}
-
-//Hover button Functionality
-AlertButton.addEventListener("mouseover"), function() {
-    this.innerText = "Hover activated!"
-};
-AlertButton.addEventListener("mouseout"), function() {
+AlertButton.addEventListener("mouseout", function() {  // remove extra parenthesis
     this.innerText = "Click Me!";
-}; 
+});
 
 // For loop to create numbered list
 const numbersList = document.getElementById("numbers");
