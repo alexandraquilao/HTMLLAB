@@ -10,6 +10,15 @@ const skills = [
     'Portfolio Development'
 ];
 
+//footer
+const footerElement = document.getElementById("current-year");
+if (footerElement) {
+    const currentYear = new Date().getFullYear();
+    footerElement.innerHTML = `© ${currentYear} Alexandra Quilao`;
+    console.log(`Today's date: ${new Date().toLocaleDateString()}`);
+} else {
+    console.error("Footer element not found - check your HTML ID!");
+}
 
 const funFacts = [
     'I love travelling. ✈️',
