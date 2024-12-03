@@ -1,51 +1,51 @@
-// Add this at the top of your script.js
+// Log to confirm the script is loaded
 console.log("JavaScript file loaded!");
 
-// Test if button exists
-const button = document.getElementById("btn-alert");
-if (button) {
-    console.log("Button found!");
+// Footer with dynamic year
+const footerElement = document.getElementById("current-year");
+if (footerElement) {
+    const currentYear = new Date().getFullYear();
+    footerElement.innerHTML = `© ${currentYear} Alexandra Quilao`;
+    console.log(`Today's date: ${new Date().toLocaleDateString()}`);
 } else {
-    console.log("Button not found - check your HTML ID");
+    console.error("Footer element not found - check your HTML ID!");
 }
 
-// footer with current year
-const footerElement = document.getElementById("footer");
-const currentYear = new Date().getFullYear();
-footerElement.innerHTML = `© ${currentYear} Alexandra Quilao`;
-
-console.log(new Date().toLocaleDateString());
-
-//Greeting based on time of day
+// Greeting based on time of day
 function setGreeting() {
-    const Greeting = document.getElementById("greeting");
-    const hour = new Date().getHours();  // Fixed Date and getHours
+    const greetingElement = document.getElementById("greeting");
+    if (!greetingElement) {
+        console.error("Greeting element not found - check your HTML!");
+        return;
+    }
+    const hour = new Date().getHours();
     if (hour < 12) {
-        Greeting.innerHTML = "Good Morning!";
-        Greeting.className = "morning";
-    }
-    else if (hour < 17) {
-        Greeting.innerHTML = "Good Afternoon!";
-        Greeting.className = "afternoon";
-    }
-    else {
-        Greeting.innerHTML = "Good Evening!";
-        Greeting.className = "evening";
+        greetingElement.innerHTML = "Good Morning!";
+        greetingElement.className = "morning";
+    } else if (hour < 17) {
+        greetingElement.innerHTML = "Good Afternoon!";
+        greetingElement.className = "afternoon";
+    } else {
+        greetingElement.innerHTML = "Good Evening!";
+        greetingElement.className = "evening";
     }
 }
 setGreeting();
 
-//Alert Button
-const AlertButton = document.getElementById("btn-alert");
-AlertButton.addEventListener("click", function() {  // remove extra parenthesis
-    this.innerText = "Clicked!";  // changed message to be different from hover
-});
+// Alert Button functionality
+const alertButton = document.getElementById("btn-alert");
+if (alertButton) {
+    alertButton.addEventListener("click", function() {
+        this.innerText = "Yay! :) ";
+    });
 
-AlertButton.addEventListener("mouseover", function() {  // remove extra parenthesis
-    this.innerText = "Hover activated!";
-});
+    alertButton.addEventListener("mouseover", function() {
+        this.innerText = "Almost there!";
+    });
 
-AlertButton.addEventListener("mouseout", function() {  // remove extra parenthesis
-    this.innerText = "Click Me!";
-});
-
+    alertButton.addEventListener("mouseout", function() {
+        this.innerText = "Click Me for Good Vibes!";
+    });
+} else {
+    console.error("Alert button not found - check your HTML ID!");
+}

@@ -1,12 +1,41 @@
-// Get the ordered list element
-const numbersList = document.getElementById("numbers");
+// Get the ordered list (Skills) and unordered list (Fun Facts) elements
+const skillsList = document.getElementById('numbers');
+const funFactsList = document.getElementById('funFactsList');
 
-for (let i = 1; i <= 12; i++) {
-    // Create a new list item element
-    const listItem = document.createElement("li");
-    
-    // Set the text content with even/odd indicator
-    listItem.textContent = `List item ${i} is ${i % 2 === 0 ? 'even' : 'odd'}`;
-    
-    numbersList.appendChild(listItem);
-}
+
+const skills = [
+    'Adobe Software',
+    'Introductory Coding using Visual Studio Code',
+    'Design Exploration',
+    'Portfolio Development'
+];
+
+
+const funFacts = [
+    'I love travelling. ✈️',
+    'Horror Movies are my favourite genre to watch. 🎥',
+    'My favourite band is Wave to Earth. 🌊🎸',
+    'I have a 2 month old puppy named Honey. 🍯'
+];
+
+
+skillsList.innerHTML = '';
+funFactsList.innerHTML = '';
+
+
+skills.forEach((skill, index) => {
+    const li = document.createElement('li');
+    li.textContent = `Skill ${index + 1}: ${skill}`;
+    skillsList.appendChild(li);
+});
+
+// Fun Facts list
+funFacts.forEach((fact, index) => {
+    const li = document.createElement('li');
+    li.textContent = `Fun Fact ${index + 1}: ${fact}`;
+    funFactsList.appendChild(li);
+});
+
+// copyright year
+document.getElementById('2024').textContent = new Date().getFullYear();
+
