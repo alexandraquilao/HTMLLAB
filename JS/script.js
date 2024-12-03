@@ -1,4 +1,4 @@
-// Log to confirm the script is loaded
+
 console.log("JavaScript file loaded!");
 
 // Footer with dynamic year
